@@ -9,7 +9,6 @@ layout: default
   {% assign featured = site.posts.first %}
 
   {% if featured %}
-  <!-- Featured Post -->
   <section class="featured-post">
     <div class="featured-post-inner">
 
@@ -27,7 +26,7 @@ layout: default
         </h2>
 
         <p class="featured-post-excerpt">
-          {{ featured.excerpt | strip_html | truncate: 200 }}
+          {{ featured.excerpt | strip_html | truncate: 250 }}
         </p>
 
         <a class="featured-post-button" href="{{ featured.url | relative_url }}">
@@ -39,20 +38,32 @@ layout: default
   </section>
   {% endif %}
 
-  <!-- Other Posts -->
   <section class="post-list-section">
-    <h2>Recent Posts</h2>
+    <h2 class="section-heading">Recent Stories</h2>
 
-    <ul class="post-list">
+    <div class="posts-grid">
       {% for post in site.posts offset:1 %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <span class="post-meta">
-            {{ post.date | date: "%b %-d, %Y" }}
-          </span>
-        </li>
+        <article class="post-preview">
+          {% if post.image %}
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          </a>
+          {% endif %}
+          
+          <div class="post-preview-content" style="padding: 1.5rem;">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h3 style="margin: 0.5rem 0;">
+              <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
+                {{ post.title }}
+              </a>
+            </h3>
+            <p style="font-size: 0.9em; color: #666;">
+              {{ post.excerpt | strip_html | truncate: 100 }}
+            </p>
+          </div>
+        </article>
       {% endfor %}
-    </ul>
+    </div>
   </section>
 
 </div>
