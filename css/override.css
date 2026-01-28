@@ -153,3 +153,39 @@
     height: auto;
   }
 }
+
+/* Restored Post Page Image Style */
+.post-featured-image img {
+    width: 100%;           /* Full width of the article container */
+    max-height: 500px;     /* Cinematic height */
+    object-fit: cover;
+    border-radius: 12px;   /* Rounded corners as per design */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+.post-header {
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+/* Share links spacing */
+.share-links {
+    margin: 20px 0 30px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Ensure code blocks look clean */
+.post-content pre {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    overflow-x: auto;
+}
