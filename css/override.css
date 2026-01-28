@@ -96,6 +96,13 @@
 .tag-ai { background-color: #fce4ec; color: #c2185b; }
 .tag-ml, .tag-machine-learning { background-color: #e0f2f1; color: #00796b; }
 
+/* Information, updates & tutorials */
+.tag-update { background-color: #fff3e0; color: #ef6c00; }
+.tag-info, .tag-information { background-color: #eceff1; color: #455a64; }
+.tag-tutorial { background-color: #f1f8e9; color: #33691e; }
+.tag-announcement { background-color: #f3e5f5; color: #4a148c; }
+.tag-featured { background-color: #fffde7; color: #f9a825; }
+
 /* --- Recent Stories Grid (Thinner Containers) --- */
 .section-heading {
   font-size: 1.8rem;
