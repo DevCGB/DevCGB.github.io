@@ -9,7 +9,7 @@ layout: default
   {% assign featured = site.posts.first %}
 
   {% if featured %}
-  <section class="featured-post">
+<section class="featured-post">
   <div class="featured-post-inner">
 
     {% if featured.image %}
@@ -35,8 +35,8 @@ layout: default
         </p>
       </div>
 
-      <a class="featured-post-button" href="{{ featured.url | relative_url }}">
-        Read full article
+      <a class="featured-post-link" href="{{ featured.url | relative_url }}">
+        Read Article <span>&#x2197;</span>
       </a>
     </div>
 
