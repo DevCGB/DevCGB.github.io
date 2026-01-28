@@ -9,11 +9,11 @@ layout: default
   {% assign featured = site.posts.first %}
 
   {% if featured %}
-  <section class="featured-post featured-large">
+  <section class="featured-post">
     <div class="featured-post-inner">
 
       {% if featured.image %}
-      <div class="featured-post-image featured-image-large">
+      <div class="featured-post-image featured-image-main">
         <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
       </div>
       {% endif %}
@@ -24,14 +24,14 @@ layout: default
             {{ featured.date | date: "%B %-d, %Y" }}
           </span>
           
-          <h2 class="featured-post-title featured-title-large">
+          <h2 class="featured-post-title">
             <a href="{{ featured.url | relative_url }}">
               {{ featured.title }}
             </a>
           </h2>
 
           {% if featured.tags %}
-          <div class="post-tags" style="margin-bottom: 1.5rem;">
+          <div class="post-tags">
             {% for tag in featured.tags %}
               <span class="tag-badge tag-{{ tag | slugify }}">{{ tag }}</span>
             {% endfor %}
@@ -39,7 +39,7 @@ layout: default
           {% endif %}
 
           <p class="featured-post-excerpt">
-            {{ featured.excerpt | strip_html | truncate: 220 }}
+            {{ featured.excerpt | strip_html | truncate: 200 }}
           </p>
         </div>
 
@@ -60,28 +60,28 @@ layout: default
         <article class="post-preview">
           {% if post.image %}
           <a href="{{ post.url | relative_url }}">
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="height: 180px;">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
           </a>
           {% endif %}
           
-          <div class="post-preview-content" style="padding: 1.2rem;">
-            <span class="post-meta" style="font-size: 0.8rem;">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <h3 style="margin: 0.4rem 0; font-size: 1.1rem;">
-              <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
+          <div class="post-preview-content">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h3 class="post-preview-title">
+              <a href="{{ post.url | relative_url }}">
                 {{ post.title }}
               </a>
             </h3>
 
             {% if post.tags %}
-            <div class="post-tags" style="margin: 0.5rem 0 0.8rem 0;">
+            <div class="post-tags small-tags">
               {% for tag in post.tags %}
-                <span class="tag-badge tag-{{ tag | slugify }}" style="font-size: 0.6rem; padding: 2px 8px;">{{ tag }}</span>
+                <span class="tag-badge tag-{{ tag | slugify }}">{{ tag }}</span>
               {% endfor %}
             </div>
             {% endif %}
 
-            <p style="font-size: 0.85rem; color: #666; line-height: 1.4;">
-              {{ post.excerpt | strip_html | truncate: 80 }}
+            <p class="post-preview-excerpt">
+              {{ post.excerpt | strip_html | truncate: 90 }}
             </p>
           </div>
         </article>
