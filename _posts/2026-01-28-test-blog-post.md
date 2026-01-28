@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "This is a test title for this blog"
 date: 2026-01-28
 image: /assets/images/Unknown.jpg
+image_alt: "Picture of a strawberry"
 ---
 
 ## Blog Post Title From First Header

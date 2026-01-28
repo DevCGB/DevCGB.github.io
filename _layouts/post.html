@@ -2,13 +2,6 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  {% if page.image %}
-  <div class="post-featured-image">
-    <img src="{{ page.image }}" alt="{{ page.title }}">
-  </div>
-  {% endif %}
-
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -22,6 +15,12 @@ layout: default
       {%- endif -%}
     </p>
   </header>
+
+  {% if page.image %}
+  <div class="post-featured-image">
+    <img src="{{ page.image }}" alt="{{ page.image_alt }}">
+  </div>
+  {% endif %}
 
   <div class="share-links">
     {% include sharelinks.html %}
