@@ -59,7 +59,6 @@
   font-weight: 600;
   color: #111;
   text-decoration: none;
-  border-bottom: 1.5px solid #111;
   padding-bottom: 2px;
   width: fit-content;
 }
@@ -81,10 +80,21 @@
   letter-spacing: 0.5px;
 }
 
-/* Custom Tag Colors */
+/* --- Tag Color Library --- */
+
+/* Existing */
 .tag-python { background-color: #e2f3e5; color: #2e7d32; }
 .tag-sql { background-color: #e3f2fd; color: #1565c0; }
 .tag-javascript { background-color: #fff9c4; color: #fbc02d; }
+
+/* New Languages */
+.tag-c-sharp, .tag-csharp, .tag-c { background-color: #f3e5f5; color: #7b1fa2; }
+.tag-c-plus-plus, .tag-cpp { background-color: #e8eaf6; color: #3f51b5; }
+.tag-java { background-color: #ffebee; color: #c62828; }
+
+/* Concepts */
+.tag-ai { background-color: #fce4ec; color: #c2185b; }
+.tag-ml, .tag-machine-learning { background-color: #e0f2f1; color: #00796b; }
 
 /* --- Recent Stories Grid (Thinner Containers) --- */
 .section-heading {

@@ -3,7 +3,7 @@ layout: post
 date: 2026-01-28
 image: "/assets/images/Unknown.jpeg"
 image_alt: "Picture of a strawberry"
-tags: [Python]
+tags: [Python, ML, Java]
 ---
 
 ## Blog Post Title From First Header
