@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title: "This is a test title for this blog"
 date: 2026-01-28
 image: /assets/images/Unknown.jpg
 ---
+
 ## Blog Post Title From First Header
 
 This is a test body
