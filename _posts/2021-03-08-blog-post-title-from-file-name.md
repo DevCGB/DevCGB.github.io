@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-03-08
+date: 2021-03-08
 image: "/assets/images/Unknown.jpeg"
 image_alt: "Picture of a strawberry"
 tags: [Python, SQL]
