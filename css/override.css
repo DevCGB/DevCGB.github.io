@@ -9,6 +9,18 @@
   align-items: flex-start;
 }
 
+/* --- Updated Featured Post Image --- */
+.featured-image-main img {
+  width: 450px;
+  height: 320px;
+  border-radius: 12px;
+  /* Object-fit: cover ensures the box is filled without stretching */
+  object-fit: cover; 
+  /* Object-position: top keeps the top of vertical images in frame */
+  object-position: top; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
 .featured-image-main img {
   width: 450px;       /* Increased width */
   height: 320px;      /* Decreased height */
