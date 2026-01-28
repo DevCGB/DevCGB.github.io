@@ -1,45 +1,59 @@
-hr {
-  margin-top: 30px;
-  margin-bottom: 20px;
+/* Featured image at top of post */
+.post-featured-image img {
+    width: 100%;
+    max-height: 400px;      /* adjust as needed */
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Post navigation links */
-.post_navi {
-  display: flex;
+/* Post title and meta spacing */
+.post-header {
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.post_navi-label {
-  font-size: 0.8em;
-  opacity: 0.5;
+.post-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.post_navi .post_navi-item {
-  padding: 0 2.2em;
-  width: 50%;
-  position: relative;
-  color: inherit !important;
+.post-meta {
+    font-size: 0.9em;
+    color: #888;
 }
 
-.post_navi .nav_prev {
-  text-align: left;
+/* Share links spacing */
+.share-links {
+    margin-bottom: 30px;
 }
 
-.post_navi .nav_next {
-  text-align: right;
+/* Post cards for homepage */
+.post-preview {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.post_navi .nav_prev .post_navi-arrow {
-  left: 0;
+.post-preview:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.post_navi .nav_next .post_navi-arrow {
-  right: 0;
+.post-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.post_navi .post_navi-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.5em;
-  opacity: 0.3;
+/* Grid layout for homepage posts */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
 }
