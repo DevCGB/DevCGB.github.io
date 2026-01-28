@@ -9,39 +9,39 @@ layout: default
   {% assign featured = site.posts.first %}
 
   {% if featured %}
-<section class="featured-post">
-  <div class="featured-post-inner">
+  <section class="featured-post">
+    <div class="featured-post-inner">
 
-    {% if featured.image %}
-    <div class="featured-post-image">
-      <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
-    </div>
-    {% endif %}
+      {% if featured.image %}
+      <div class="featured-post-image">
+        <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
+      </div>
+      {% endif %}
 
-    <div class="featured-post-content">
-      <div>
-        <span class="post-meta featured-meta">
-          {{ featured.date | date: "%B %-d, %Y" }}
-        </span>
-        
-        <h2 class="featured-post-title">
-          <a href="{{ featured.url | relative_url }}">
-            {{ featured.title }}
-          </a>
-        </h2>
+      <div class="featured-post-content">
+        <div>
+          <span class="post-meta featured-meta">
+            {{ featured.date | date: "%B %-d, %Y" }}
+          </span>
+          
+          <h2 class="featured-post-title">
+            <a href="{{ featured.url | relative_url }}">
+              {{ featured.title }}
+            </a>
+          </h2>
 
-        <p class="featured-post-excerpt">
-          {{ featured.excerpt | strip_html | truncate: 180 }}
-        </p>
+          <p class="featured-post-excerpt">
+            {{ featured.excerpt | strip_html | truncate: 180 }}
+          </p>
+        </div>
+
+        <a class="featured-post-link" href="{{ featured.url | relative_url }}">
+          Read Article <span>&#x2197;</span>
+        </a>
       </div>
 
-      <a class="featured-post-link" href="{{ featured.url | relative_url }}">
-        Read Article <span>&#x2197;</span>
-      </a>
     </div>
-
-  </div>
-</section>
+  </section>
   {% endif %}
 
   <section class="post-list-section">
