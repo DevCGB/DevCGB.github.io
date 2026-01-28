@@ -1,22 +1,79 @@
-/* Featured Post Refinements */
-.featured-meta {
-  display: block;
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+/* --- Global & Layout Variables --- */
+:root {
+  --primary-color: #333;
+  --accent-blue: #2a7ae2;
+  --text-muted: #666;
+  --date-color: #888;
+  --border-light: #eee;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 20px rgba(0,0,0,0.12);
 }
 
+/* --- Featured Post (Top Section) --- */
+.featured-post {
+  margin: 3rem 0;
+}
+
+.featured-post-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.featured-post-image img {
+  width: 400px; /* Increased for dominance */
+  height: 400px; /* Square ratio as seen in design */
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.featured-post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px; /* Matches image height roughly */
+  padding: 10px 0;
+}
+
+.featured-meta {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--date-color);
+  margin-bottom: 0.5rem;
+}
+
+.featured-post-title {
+  margin-top: 0;
+  font-size: 2.5rem; /* Large featured font */
+  line-height: 1.2;
+}
+
+.featured-post-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-post-excerpt {
+  margin: 1rem 0;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Arrow Link Style Button */
 .featured-post-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-top: auto;
-  font-weight: 500;
-  color: #333;
+  font-weight: 600;
+  color: var(--primary-color);
   text-decoration: none;
-  border-bottom: 1.5px solid #333;
+  border-bottom: 1.5px solid var(--primary-color);
   padding-bottom: 2px;
   width: fit-content;
   transition: opacity 0.2s ease;
@@ -26,9 +83,15 @@
   opacity: 0.7;
 }
 
-/* Tag System */
+.featured-post-link span {
+  font-size: 1.1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* --- Tag System --- */
 .post-tags {
-  margin-top: 15px;
+  margin: 10px 0;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -41,235 +104,114 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Default fallback */
   color: #333;
 }
 
-/* Color Map for Tags */
+/* Dynamic Tag Colors */
 .tag-python { background-color: #e2f3e5; color: #2e7d32; }
 .tag-sql { background-color: #e3f2fd; color: #1565c0; }
 .tag-javascript { background-color: #fff9c4; color: #fbc02d; }
+.tag-html { background-color: #ffebee; color: #c62828; }
 
-/* Featured Post Link Styling */
-.featured-post-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: auto;
-  font-weight: 500;
-  color: #333; /* Dark grey/black text */
-  text-decoration: none;
-  padding-bottom: 2px;
-  width: fit-content;
-  transition: opacity 0.2s ease;
+/* --- Recent Stories (Grid Section) --- */
+.section-heading {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.5rem;
 }
 
-.featured-post-link:hover {
-  opacity: 0.7;
-  color: #000;
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.featured-post-link span {
-  font-size: 1.1rem;
-  text-decoration: none; /* Keeps the arrow from being underlined */
-  display: inline-block;
-}
-
-/* Adjusting content spacing to ensure the link sits right */
-.featured-post-content {
+.post-preview {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 5px 0;
 }
 
-.featured-meta {
+.post-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.post-preview img {
+  width: 100%;
+  height: 180px; /* Smaller card images */
+  object-fit: cover;
   display: block;
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 8px;
 }
 
-/* Date styling for Featured Section */
-.featured-meta {
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #888;
+.post-preview-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.featured-post-title {
-  margin-top: 0;
-  font-size: 2rem; /* Larger for focus */
-  line-height: 1.2;
+.post-preview-content h3 {
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+  line-height: 1.3;
 }
 
-/* Button design matching a modern UI */
-.featured-post-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #111; /* Darker, more modern look */
-  color: #fff !important;
-  text-decoration: none;
-  border-radius: 50px; /* Pill shape is very 'in' right now */
-  font-weight: 500;
+.post-preview-content p {
   font-size: 0.9rem;
-  transition: all 0.3s ease;
-  width: fit-content;
-  border: 1px solid transparent;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
-.featured-post-button:hover {
-  background-color: #fff;
-  color: #111 !important;
-  border-color: #111;
-  transform: translateY(-2px);
+/* Adjusting tags inside small cards */
+.post-preview .tag-badge {
+  padding: 2px 8px;
+  font-size: 0.6rem;
 }
 
-/* Refinement for the text container */
-.featured-post-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px 0;
+/* --- Article Page Styles (post.html) --- */
+.post-featured-image img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
 }
 
-/* Responsive Fix for Featured Post */
-@media (max-width: 768px) {
+.post-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.share-links {
+  margin: 20px 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
   .featured-post-inner {
     flex-direction: column;
+    gap: 1.5rem;
   }
   
   .featured-post-image img {
     width: 100%;
-    height: 250px;
+    height: auto;
   }
-}
 
-/* Heading Style */
-.section-heading {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.5rem;
-}
+  .featured-post-content {
+    min-height: auto;
+  }
 
-/* Ensure images don't overflow the cards */
-.post-preview img {
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-.post-preview:hover img {
-  opacity: 0.9;
-}
-
-.featured-post {
-  margin: 3rem 0;
-}
-
-.featured-post-inner {
-  display: flex;
-  gap: 2rem;
-  align-items: stretch;
-}
-
-.featured-post-image img {
-  width: 260px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.featured-post-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.featured-post-title {
-  margin-top: 0;
-}
-
-.featured-post-excerpt {
-  margin: 1rem 0;
-  color: #555;
-}
-
-.featured-post-button {
-  display: inline-block;
-  margin-top: auto;
-  padding: 0.6rem 1.2rem;
-  background-color: #2a7ae2;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  width: fit-content;
-}
-
-.featured-post-button:hover {
-  background-color: #1f5fbf;
-}
-
-
-/* Featured image at top of post */
-.post-featured-image img {
-    width: 100%;
-    max-height: 400px;      /* adjust as needed */
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Post title and meta spacing */
-.post-header {
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.post-title {
-    font-size: 2.2em;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.post-meta {
-    font-size: 0.9em;
-    color: #888;
-}
-
-/* Share links spacing */
-.share-links {
-    margin-bottom: 30px;
-}
-
-/* Post cards for homepage */
-.post-preview {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.post-preview:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-.post-preview img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* Grid layout for homepage posts */
-.posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+  .featured-post-title {
+    font-size: 2rem;
+  }
 }
