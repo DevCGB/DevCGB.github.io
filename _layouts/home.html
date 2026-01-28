@@ -6,17 +6,53 @@ layout: default
 
   {{ content }}
 
-  <h2>Recent Posts</h2>
+  {% assign featured = site.posts.first %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-meta">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </span>
-      </li>
-    {% endfor %}
-  </ul>
+  {% if featured %}
+  <!-- Featured Post -->
+  <section class="featured-post">
+    <div class="featured-post-inner">
+
+      {% if featured.image %}
+      <div class="featured-post-image">
+        <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
+      </div>
+      {% endif %}
+
+      <div class="featured-post-content">
+        <h2 class="featured-post-title">
+          <a href="{{ featured.url | relative_url }}">
+            {{ featured.title }}
+          </a>
+        </h2>
+
+        <p class="featured-post-excerpt">
+          {{ featured.excerpt | strip_html | truncate: 200 }}
+        </p>
+
+        <a class="featured-post-button" href="{{ featured.url | relative_url }}">
+          Read article
+        </a>
+      </div>
+
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Other Posts -->
+  <section class="post-list-section">
+    <h2>Recent Posts</h2>
+
+    <ul class="post-list">
+      {% for post in site.posts offset:1 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="post-meta">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
 </div>
