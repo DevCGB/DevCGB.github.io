@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-01-28
-image: /assets/images/Unknown.jpg
+image: "/assets/images/Unknown.jpeg"
 image_alt: "Picture of a strawberry"
 ---
 
