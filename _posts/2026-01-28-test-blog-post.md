@@ -8,7 +8,6 @@ image: /assets/images/Unknown.jpg
 
 This is a test body
 
----
 
 ### This is a header
 
