@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-01-28
+date: 2026-01-28 20:35:00 +0000
 image: "/assets/images/code.jpeg"
 image_alt: "Picture of HTML code"
 tags: [info]
@@ -21,7 +21,6 @@ x = 10
 
 for i in range(x):
     print('Please work!')
-
 ```
 
 Along with code snippets, I aim to provide a detailed explanation of what the program does; explanations will range in detail based on the complexity of the code being shown. Here I’ll  try to justify my abhorrent code choices and why I’ve chosen to do things in a specific way.
