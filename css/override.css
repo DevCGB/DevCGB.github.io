@@ -11,7 +11,7 @@
 
 /* --- Updated Featured Post Image --- */
 .featured-image-main img {
-  width: 375;
+  width: 375px;
   max-width: none;
   height: 320px;
   border-radius: 12px;
@@ -23,7 +23,7 @@
 }
 
 .featured-image-main img {
-  width: 450px;       /* Increased width */
+  width: 375px;       /* Increased width */
   height: 320px;      /* Decreased height */
   border-radius: 12px;
   object-fit: cover;
