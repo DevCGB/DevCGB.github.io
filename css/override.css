@@ -1,3 +1,49 @@
+/* Date styling for Featured Section */
+.featured-meta {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #888;
+}
+
+.featured-post-title {
+  margin-top: 0;
+  font-size: 2rem; /* Larger for focus */
+  line-height: 1.2;
+}
+
+/* Button design matching a modern UI */
+.featured-post-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #111; /* Darker, more modern look */
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 50px; /* Pill shape is very 'in' right now */
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  width: fit-content;
+  border: 1px solid transparent;
+}
+
+.featured-post-button:hover {
+  background-color: #fff;
+  color: #111 !important;
+  border-color: #111;
+  transform: translateY(-2px);
+}
+
+/* Refinement for the text container */
+.featured-post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
 /* Responsive Fix for Featured Post */
 @media (max-width: 768px) {
   .featured-post-inner {

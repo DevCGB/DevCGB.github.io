@@ -10,15 +10,20 @@ layout: default
 
   {% if featured %}
   <section class="featured-post">
-    <div class="featured-post-inner">
+  <div class="featured-post-inner">
 
-      {% if featured.image %}
-      <div class="featured-post-image">
-        <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
-      </div>
-      {% endif %}
+    {% if featured.image %}
+    <div class="featured-post-image">
+      <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
+    </div>
+    {% endif %}
 
-      <div class="featured-post-content">
+    <div class="featured-post-content">
+      <div>
+        <span class="post-meta featured-meta">
+          {{ featured.date | date: "%B %-d, %Y" }}
+        </span>
+        
         <h2 class="featured-post-title">
           <a href="{{ featured.url | relative_url }}">
             {{ featured.title }}
@@ -26,16 +31,17 @@ layout: default
         </h2>
 
         <p class="featured-post-excerpt">
-          {{ featured.excerpt | strip_html | truncate: 250 }}
+          {{ featured.excerpt | strip_html | truncate: 180 }}
         </p>
-
-        <a class="featured-post-button" href="{{ featured.url | relative_url }}">
-          Read article
-        </a>
       </div>
 
+      <a class="featured-post-button" href="{{ featured.url | relative_url }}">
+        Read full article
+      </a>
     </div>
-  </section>
+
+  </div>
+</section>
   {% endif %}
 
   <section class="post-list-section">
