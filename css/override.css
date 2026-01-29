@@ -112,9 +112,14 @@
 /* Information, updates & tutorials */
 .tag-update { background-color: #fff3e0; color: #ef6c00; }
 .tag-info, .tag-information { background-color: #eceff1; color: #455a64; }
-.tag-tutorial { background-color: #f1f8e9; color: #33691e; }
+.tag-tutorial { background-color: #e0f7fa; color: #006064; }
 .tag-announcement { background-color: #f3e5f5; color: #4a148c; }
 .tag-featured { background-color: #fffde7; color: #f9a825; }
+
+/* --- Skill Level Tags --- */
+.tag-beginner { background-color: #e8f5e9; color: #2e7d32; }
+.tag-intermediate { background-color: #fff8e1; color: #f57f17; }
+.tag-advanced { background-color: #ffebee; color: #c62828; }
 
 /* --- Recent Stories Grid (Thinner Containers) --- */
 .section-heading {
