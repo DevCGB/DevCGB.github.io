@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-01-29 08:42:00 +0000
-image: "/assets/images/numpy.jpg"
+image: "/assets/images/numpy.png"
 image_alt: "Picture of HTML code"
 tags: [python, tutorial, beginner]
 ---
