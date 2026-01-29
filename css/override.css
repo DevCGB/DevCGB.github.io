@@ -1,3 +1,12 @@
+/* --- Basic Python Syntax Highlighting --- */
+.highlight .k { color: #d73a49; } /* keywords: import, for, in, def */
+.highlight .s { color: #032f62; } /* strings: 'Please work!' */
+.highlight .n { color: #005cc5; } /* numbers: 10, 1, 2 */
+.highlight .nb { color: #e36209; } /* built-ins: print, range, len */
+.highlight .nc { color: #6f42c1; } /* class names */
+.highlight .nf { color: #6f42c1; } /* functions: append, array */
+.highlight .c1 { color: #6a737d; font-style: italic; } /* comments */
+
 /* --- Featured Post Sizing --- */
 .featured-post {
   margin: 3rem 0;
